@@ -42,7 +42,7 @@ python populate_database.py --reset
 ```sh
 # Execute from src directory
 cd src
-python rag_app/query_rag.py "how much does a landing page cost?"
+python rag_app/query_rag.py "where was the wizard of Oz from"
 ```
 
 Example output:
