@@ -1,5 +1,7 @@
 *.pyc
+__pycache__/
 **/chroma
 env/
 .env
-.vscode
+.vscode/
+*.sqlite3
