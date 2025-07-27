@@ -1,7 +1,5 @@
 from langchain_community.vectorstores import Chroma
 from rag_app.get_embedding_function import get_embedding_function
-from dotenv import load_dotenv
-load_dotenv()
 
 CHROMA_PATH = "data/chroma"
 CHROMA_DB_INSTANCE = None  # Reference to singleton instance of ChromaDB
