@@ -50,7 +50,7 @@ Example output:
 ```text
 Answer the question based on the above context: How much does a landing page cost to develop?
 
-Response:  Based on the context provided, the cost for a landing page service offered by Galaxy Design Agency is $4,820. Specifically, under the "Our Services" section, it states "Landing Page for Small Businesses ($4,820)" when describing the landing page service. So the cost listed for a landing page is $4,820.
+Response:  Based on the context provided, the cost for a landing page service offered by Galaxy Design Agency is $4,820.
 Sources: ['src/data/source/galaxy-design-client-guide.pdf:1:0', 'src/data/source/galaxy-design-client-guide.pdf:7:0', 'src/data/source/galaxy-design-client-guide.pdf:7:1']
 ```
 
@@ -61,22 +61,17 @@ The project currently uses phi3:mini for optimal speed/performance balance:
 OLLAMA_MODEL_ID = "phi3:mini"
 ```
 
-## Ollama Model Options
-### Fast & Lightweight:
+### Ollama Model Options:
 
 - phi3:mini (3.8B) - Current default, good balance
 - gemma:2b (2B) - Very fast, smaller model
 - codellama:7b (7B) - Better for code-related queries
 - llama3:70b (70B) - Best quality, very slow
 
-## Performance Optimization
 ### Speed Comparison
 - Ollama (Local): 5-30 seconds per query
 - Cloud APIs: 1-5 seconds per query
 - Groq (Free tier eligible)
-
-### Cloud API Options (Faster)
-For significantly better speed, switch to cloud APIs:
 
 ### OpenAI (Recommended for production)
 - Install: pip install langchain-openai
