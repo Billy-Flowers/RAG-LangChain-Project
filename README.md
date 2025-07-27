@@ -22,7 +22,7 @@ A Retrieval-Augmented Generation (RAG) application built with LangChain that all
 ```bash
 git clone <your-repo-url>
 cd RAG-LangChain-Project
-
+```
 
 ### Installing Requirements
 
