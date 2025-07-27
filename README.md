@@ -48,10 +48,11 @@ python rag_app/query_rag.py "how much does a landing page cost?"
 Example output:
 
 ```text
-Answer the question based on the above context: How much does a landing page cost to develop?
+Answer the question based on the above context: What did the Wizard of Oz give the Scarecrow, and why?
 
-Response:  Based on the context provided, the cost for a landing page service offered by Galaxy Design Agency is $4,820.
-Sources: ['src/data/source/galaxy-design-client-guide.pdf:1:0', 'src/data/source/galaxy-design-client-guide.pdf:7:0', 'src/data/source/galaxy-design-client-guide.pdf:7:1']
+Response:  The Great and Terrible (Wizard) promised to grant the Scarecrow a lot of new brains if he killed the Wicked Witch of the West. The reason for this was that by killing her, the Scarecrow hoped to earn these 'great many good brains' which would fulfill his wish and make him as 
+wise as any other person in Oz.
+Sources: ['src\\data\\source\\the_wonderful_wizard_of_oz.pdf:73:0', 'src\\data\\source\\the_wonderful_wizard_of_oz.pdf:23:3', 'src\\data\\source\\the_wonderful_wizard_of_oz.pdf:47:0', 'src\\data\\source\\the_wonderful_wizard_of_oz.pdf:46:3', 'src\\data\\source\\the_wonderful_wizard_of_oz.pdf:15:3']
 ```
 
 ## Model Configuration
