@@ -14,7 +14,7 @@ Answer the question based only on the following context:
 Answer the question based on the above context: {question}
 """
 
-OLLAMA_MODEL_ID = "llama3"
+OLLAMA_MODEL_ID = "phi3:mini"
 
 
 @dataclass
@@ -23,6 +23,7 @@ class QueryResponse:
     response_text: str
     sources: List[str]
 
+model = ChatOllama(model=OLLAMA_MODEL_ID)
 
 def query_rag(query_text: str) -> QueryResponse:
     db = get_chroma_db()
@@ -32,9 +33,7 @@ def query_rag(query_text: str) -> QueryResponse:
     context_text = "\n\n---\n\n".join([doc.page_content for doc, _score in results])
     prompt_template = ChatPromptTemplate.from_template(PROMPT_TEMPLATE)
     prompt = prompt_template.format(context=context_text, question=query_text)
-    print(prompt)
 
-    model = ChatOllama(model=OLLAMA_MODEL_ID)
     response = model.invoke(prompt)
     response_text = response.content
 
@@ -47,4 +46,10 @@ def query_rag(query_text: str) -> QueryResponse:
 
 
 if __name__ == "__main__":
-    query_rag("How much does a landing page cost to develop?")
+    import sys
+    if len(sys.argv) > 1:
+        query_text = sys.argv[1]
+    else:
+        query_text = "How much does a landing page cost to develop?"
+    
+    query_rag(query_text)
