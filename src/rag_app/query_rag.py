@@ -14,7 +14,7 @@ Answer the question based only on the following context:
 Answer the question based on the above context: {question}
 """
 
-OLLAMA_MODEL_ID = "phi3:mini"
+OLLAMA_MODEL_ID = "phi3:mini" #change this based on your llama model
 
 
 @dataclass
@@ -29,7 +29,7 @@ def query_rag(query_text: str) -> QueryResponse:
     db = get_chroma_db()
 
     # Search the DB.
-    results = db.similarity_search_with_score(query_text, k=3)
+    results = db.similarity_search_with_score(query_text, k=4)
     context_text = "\n\n---\n\n".join([doc.page_content for doc, _score in results])
     prompt_template = ChatPromptTemplate.from_template(PROMPT_TEMPLATE)
     prompt = prompt_template.format(context=context_text, question=query_text)
@@ -50,6 +50,6 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         query_text = sys.argv[1]
     else:
-        query_text = "How much does a landing page cost to develop?"
+        query_text = "What's your model name lil bro?"
     
     query_rag(query_text)
