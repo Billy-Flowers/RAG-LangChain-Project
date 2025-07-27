@@ -20,7 +20,7 @@ A Retrieval-Augmented Generation (RAG) application built with LangChain that all
 
 1. Clone the repository:
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Billy-Flowers/RAG-LangChain-Project
 cd RAG-LangChain-Project
 ```
 
