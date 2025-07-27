@@ -83,7 +83,7 @@ model = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)
 ```
 
 ### Optimization Tips
-- Reduce context size: Change k=3 to k=1 in similarity search
+- Reduce context size: Change k=3 to k=1 in similarity search (recommended only for shorter pdfs 1-8 pages)
 - Use smaller models: Switch to phi3:mini or gemma:2b
 - Switch to cloud APIs: 10x+ speed improvement
 - Cache model initialization: Model is loaded once at module level
