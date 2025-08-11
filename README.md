@@ -72,7 +72,7 @@ OLLAMA_MODEL_ID = "phi3:mini"
 ### Speed Comparison
 - Ollama (Local): 5-30 seconds per query
 - Cloud APIs: 1-5 seconds per query
-- Groq (Free tier eligible)
+- Groq (Free tier eligible) - 1-2 seconds per qeuery
 
 ### OpenAI (Recommended for production)
 - Install: pip install langchain-openai
@@ -84,7 +84,7 @@ model = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)
 ```
 
 ### Optimization Tips
-- Reduce context size: Change k=3 to k=1 in similarity search (recommended only for shorter pdfs 1-8 pages)
+- Reduce context size: Change k=5 to k=3 in similarity search (recommended only for shorter pdfs 1-8 pages)
 - Use smaller models: Switch to phi3:mini or gemma:2b
 - Switch to cloud APIs: 10x+ speed improvement
 - Cache model initialization: Model is loaded once at module level
